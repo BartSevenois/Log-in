@@ -1,0 +1,172 @@
+.pagecontent.login, .pagecontent.register {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url(../images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  z-index: 0;
+
+}
+.register-form .form-left {
+  width: 50%;
+  float: left;
+}
+.register-form .form-right {
+  width: 50%;
+  float: right;
+}
+.login-form, .register-form {
+  position: fixed; /* or absolute */
+  min-height: 300px;
+  top: 25%;
+  left: 37.5%;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 2px;
+  padding-top: 3.5%;
+  padding-bottom: 2.2%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.register-form {
+  top: 17%;
+  left: 25%;
+  padding-top: 3.5%;
+  padding-bottom: 4%;
+  width: 45%;
+}
+
+.register-form p {
+  color: #c10000;
+}
+
+.register-form a {
+  background-color: #01676b;
+}
+.login-form button {
+  background-color: #01676b;
+  margin-top: 15px;
+}
+
+.register-form span, .login-form span {
+  color: #01676b;
+}
+
+.login-form h2, .register-form h2 {
+  color: #444444;
+  margin-bottom: 30px;
+}
+
+.login-form a {
+  display:block;
+  margin-top:10px
+}
+
+
+/** Login 2 **/
+.login .form-left {
+  height: 100vh;
+  background: url(../images/oss-photography-1623196-unsplash.jpg) no-repeat fixed;
+  background-size: 100vh 100vh !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  z-index: 0;
+}
+
+.login .form-left .logo {
+  width: 100%;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.login .form-left .logo h2{
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  margin-left: -32px;
+  position: absolute;
+  margin-top: 29px;
+  letter-spacing: 1px;
+  font-size: 2.4em;
+}
+
+.login .form-left .logo img {
+  width: 148px;
+}
+.login .form-right form a, .register .form-right form a {
+  background-color: #2eb299;
+}
+.login .form-right form {
+  position: relative;
+  top: 20px;
+}
+.login .form-right p{
+  color: darkred;
+  position: relative;
+}
+.login .form-right {
+  padding-left: 150px;
+  position: relative;
+  height: 100vh;
+}
+.login .form-right h2 {
+  color: #2eb299;
+}
+
+.login .form-right .login, .login .form-right .register {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 30%;
+}
+.login .form-right .login button, .login .form-right .register button{
+  margin-top: 20px;
+  background-color: #2eb299;
+}
+
+
+.login .form-right .login input, .login .form-right .register input{
+  border-color: #4e4e4e;
+  padding-right: 25px;
+}
+
+.login .form-right .login .uk-inline{
+  width: 100%;
+}
+
+.login .form-right .login h2 {
+  margin-bottom: 35px;
+  }
+
+.login .form-right #registerLink, .login .form-right #loginLink {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+}
+.login .form-right #loginLink {
+  display: none;
+}
+.login .form-right .register form {
+  overflow: hidden;
+}
+.login .form-right .register {
+  width: 80%;
+  display: none;
+}
+
+.login .form-right .register button {
+  display: block;
+}
+.login .form-right .register label {display: block;}
+.login .form-right .register .col {
+  float: left;
+  width: 40%;
+}

@@ -1,0 +1,102 @@
+<%- include('partials/top') %>
+<div class="login">
+  <div class="uk-grid-collapse" uk-grid>
+    <div class="uk-width-1-3@m uk-width-1-1@s form-left">
+      <div class="uk-inline logo">
+        <img style="display:inline" src="images/logo.png" alt="">
+        <h2 style="display:inline">EALLOID</h2>
+      </div>
+    </div>
+    <div class="uk-width-2-3@m uk-width-1-1@s form-right">
+      <a class="uk-button uk-button-default" onclick="register('register', 'login')" id="registerLink" href="#">Create account</a>
+      <a class="uk-button uk-button-default" onclick="register('login', 'register')" id="loginLink" href="#">Log in</a>
+      <div id="login" class="login">
+
+        <h2>Login</h2>
+
+        <form name="login" class="uk-form-stacked" action="" onsubmit="return validateForm()" method="post">
+          <p id="login-error"><%= message %></p>
+          <div class="uk-margin">
+            <label class="uk-form-label">Username</label>
+            <div class="uk-inline">
+              <span class="uk-form-icon" uk-icon="icon: user"></span>
+              <input id="username" onkeyup="checkForEnterEvent(event)" class="uk-input" type="text" name="username" value="<%= username%>" placeholder="">
+            </div>
+          </div>
+
+          <div class="uk-margin">
+            <label class="uk-form-label">Password</label>
+            <div class="uk-inline">
+              <span class="uk-form-icon" uk-icon="icon: lock"></span>
+              <input id="password" onkeyup="checkForEnterEvent(event)"  class="uk-input" type="password" name="password" value="" placeholder="">
+            </div>
+          </div>
+
+          <a class="uk-button uk-button-primary" onclick="loginUser()" href="#">Log in</a>
+          <p id="message"></p>
+        </form>
+
+      </div>
+      <div id="register" class="register">
+        <h2>Register </h2>
+        <form id="register-form" class="" action="/register" method="post">
+
+          <div style="overflow:hidden; width:100%;" class="">
+            <div class="col">
+              <div class="uk-margin">
+                <label class="uk-form-label">First name</label>
+                <div class="uk-inline">
+                  <span class="uk-form-icon" uk-icon="icon: user"></span>
+                  <input onkeyup="checkName('firstName')" onchange="checkName('firstName')" id="firstName" class="uk-input" type="text" name="firstName" value="" placeholder="">
+                </div>
+              </div>
+
+              <div class="uk-margin">
+                <label class="uk-form-label">Last name</label>
+                <div class="uk-inline">
+                  <span class="uk-form-icon" uk-icon="icon: users"></span>
+                  <input onkeyup="checkName('lastName')" onchange="checkName('lastName')"id="lastName" class="uk-input" type="text" name="lastName" value="" placeholder="">
+                </div>
+              </div>
+
+                <div class="uk-margin">
+                  <label class="uk-form-label">Email</label>
+                  <div class="uk-inline">
+                    <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                    <input onkeyup="checkMail('email')" onchange="checkMail('email')" id="email" class="uk-input" type="text" name="email" value="" placeholder="">
+                  </div>
+                </div>
+
+
+            </div>
+            <div class="col">
+              <div class="uk-margin">
+                <label class="uk-form-label">Username</label>
+                <div class="uk-inline">
+                  <span class="uk-form-icon" uk-icon="icon: tag"></span>
+                  <input class="uk-input" type="text" name="username" value="" placeholder="">
+                </div>
+              </div>
+
+
+
+              <div class="uk-margin">
+                <label class="uk-form-label">Password</label>
+                <div class="uk-inline">
+                  <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                  <input class="uk-input" type="password" name="password" value="" placeholder="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="display:block" class="">
+            <a class="uk-button uk-button-primary" onclick="registerUser()" href="#">Register</a>
+            <p id="messageRegister"></p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('partials/bottom') %>
